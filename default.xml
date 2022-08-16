@@ -2,13 +2,24 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-13.0.0_r3"
            remote="aosp"
            sync-j="4" />
 
   <superproject name="platform/superproject" remote="aosp" revision="android-13.0.0_r3" />
+
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+  <remote  name="fusion"
+           fetch="https://github.com/Fusion-OS"
+           revision="thirteen" />
+
   <contactinfo bugurl="go/repo-bug" />
 
   <project path="build/make" name="platform/build" groups="pdk" >
@@ -1166,5 +1177,10 @@
   <project path="tools/tradefederation/prebuilts" name="platform/tools/tradefederation/prebuilts" groups="pdk,tradefed" clone-depth="1" />
   <project path="tools/treble" name="platform/tools/treble" groups="tools,pdk" />
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
-  <!-- END open-source projects -->
+
+  <!-- FusionOS -->
+  <include name="snippets/remove.xml" />
+  <include name="snippets/fusion.xml" />
+  <include name="snippets/additional.xml" />
+
 </manifest>

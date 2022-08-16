@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="arrow"
+           fetch="https://github.com/ArrowOS"
+           review="https://review.arrowos.net/"
+           revision="refs/heads/arrow-12.1" />
+
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+  <!-- External -->
+  <project path="external/mksh" name="android_external_mksh" remote="arrow" />
+  <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="arrow" />
+  <project path="external/json-c" name="android_external_json-c" remote="arrow" />
+
+  <!-- Prebuilt -->
+  <project path="prebuilts/tools-fuse" name="android_prebuilts_tools-extras" remote="arrow" />
+
+  <!-- Tools -->
+  <project path="tools/extract-utils" name="android_tools_extract-utils" remote="arrow" />
+
+</manifest>
